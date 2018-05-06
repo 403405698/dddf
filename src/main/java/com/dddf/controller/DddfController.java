@@ -3,6 +3,7 @@ package com.dddf.controller;
 import com.dddf.service.DddfService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
@@ -13,13 +14,13 @@ public class DddfController {
     @Autowired
     private DddfService dddfService;
 
-    @GetMapping(value = "/hello")
-    public String hello() {
+    @GetMapping(value = "/hello")//请求
+    public String hello() {   //方法
         System.err.println("第一次提交");
         return dddfService.hello();
     }
 
-    @GetMapping(value = "getImage")
+    @PostMapping(value = "getImage")
     public String getImage(String type) {
         return dddfService.selectMaterial(type);
     }
