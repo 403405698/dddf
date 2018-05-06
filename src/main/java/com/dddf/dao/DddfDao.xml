@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dddf.dao.DddfDao" >
+
+    <select id='selectMenu' resultType="java.util.Map" >
+        SELECT
+            id AS menuid,
+            NAME As menu_uame,
+            url As menu_url,
+            is_show As is_show
+        FROM
+            `menu`;
+    </select>
+    <select id = "selectMaterial" resultType="java.util.Map">
+        SELECT
+            name,
+            materiel_url,
+            ad_position_id,
+            type
+        FROM
+            `ad_material`
+        WHERE
+        1=1
+        <if test ="type !=null and type !=''">
+            and type = #{type}
+        </if>
+
+    </select>
+    <insert id ="insertUser">
+        INSERT INTO
+          testuser (testname, age, sex)
+        VALUES
+	        (#{map.testname}, #{map.age}, #{map.sex})
+    </insert>
+
+</mapper>
