@@ -15,6 +15,7 @@ public class DddfController {
 
     @GetMapping(value = "/hello")
     public String hello() {
+        System.err.println("第一次提交");
         return dddfService.hello();
     }
 
