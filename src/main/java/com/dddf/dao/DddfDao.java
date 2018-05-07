@@ -12,3 +12,52 @@ public interface DddfDao {
     void insertUser(@Param("map")Map map);
 
 }
+
+
+
+/*
+* public interface DddfDao {
+    List<Map<String, Object>> selectMenu();
+
+    List<Map<String, Object>> selectMaterial(@Param("type") String type);
+    void insertUser(@Param("map")Map map);
+
+}
+
+
+
+
+
+
+
+
+
+public interface DddfDao {
+    List<Map<String, Object>> selectMenu();
+
+    List<Map<String, Object>> selectMaterial(@Param("type") String type);
+    void insertUser(@Param("map")Map map);
+
+}
+
+
+*
+* */
+
+
+
+
+
+
+
+
+/*
+* public interface DddfDao {
+    List<Map<String, Object>> selectMenu();
+
+    List<Map<String, Object>> selectMaterial(@Param("type") String type);
+    void insertUser(@Param("map")Map map);
+
+}
+
+* */

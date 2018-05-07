@@ -33,3 +33,64 @@ public class DddfServiceImpl implements DddfService {
         dddfDao.insertUser(map);
     }
 }
+/*
+*
+*
+* @Service
+public class DddfServiceImpl implements DddfService {
+    @Autowired
+    private DddfDao dddfDao;
+
+    @Override
+    public String hello() {
+        List<Map<String, Object>> menuList = dddfDao.selectMenu();
+
+        return JSON.toJSONString(menuList);
+    }
+
+    @Override
+    public String selectMaterial(String type) {
+       List<Map<String,Object>> materialList = dddfDao.selectMaterial(type);
+        return JSON.toJSONString(materialList);
+    }
+
+    @Override
+    public void insertUser(Map map) {
+        //实现
+        dddfDao.insertUser(map);
+    }
+}
+*
+*
+*
+* */
+
+
+/*
+*
+*
+* @Service
+public class DddfServiceImpl implements DddfService {
+    @Autowired
+    private DddfDao dddfDao;
+
+    @Override
+    public String hello() {
+        List<Map<String, Object>> menuList = dddfDao.selectMenu();
+
+        return JSON.toJSONString(menuList);
+    }
+
+    @Override
+    public String selectMaterial(String type) {
+       List<Map<String,Object>> materialList = dddfDao.selectMaterial(type);
+        return JSON.toJSONString(materialList);
+    }
+
+    @Override
+    public void insertUser(Map map) {
+        //实现
+        dddfDao.insertUser(map);
+    }
+}
+*/

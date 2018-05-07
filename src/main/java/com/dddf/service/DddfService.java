@@ -7,3 +7,13 @@ public interface DddfService {
     String selectMaterial(String type);
     void insertUser(Map map);
 }
+/*
+* public interface Ddd{
+* String hello();
+* }
+*
+*
+*
+*
+*
+* */
