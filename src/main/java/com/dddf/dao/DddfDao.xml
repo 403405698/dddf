@@ -33,6 +33,21 @@
 	        (#{map.testname}, #{map.age}, #{map.sex})
     </insert>
 
+    <select id="selectOrder" resultType="java.util.Map">
+            SELECT
+                po.orderid,
+                po.order_name,
+                po.ad_app_id,
+                po.ad_channel_id,
+                po.ad_position_id,
+                pod.city_code
+            FROM
+                pmp_orders po
+            LEFT JOIN pmp_order_detail pod ON po.orderid = pod.order_id
+            WHERE pod.city_code=#{city_code} -- 查询条件
+             ORDER BY -- 排序，根据订单号排序
+               po.orderid
+    </select>
 </mapper>
 
 

@@ -23,7 +23,7 @@ public class DddfServiceImpl implements DddfService {
 
     @Override
     public String selectMaterial(String type) {
-       List<Map<String,Object>> materialList = dddfDao.selectMaterial(type);
+        List<Map<String, Object>> materialList = dddfDao.selectMaterial(type);
         return JSON.toJSONString(materialList);
     }
 
@@ -31,6 +31,21 @@ public class DddfServiceImpl implements DddfService {
     public void insertUser(Map map) {
         //实现
         dddfDao.insertUser(map);
+    }
+
+    /**
+     * 根据城市code查询订单
+     *
+     * @param city_code
+     * @return
+     */
+    @Override
+    public String selectOrder(String city_code) {
+        String orders = null;//接受查询 的消息
+        if (city_code != null && city_code != "") { //如果传送的参数city_code不为空，那么执行语句里面的代码
+          orders =   JSON.toJSONString(dddfDao.selectOrder(city_code));
+        }
+        return orders;//查询的结果返回给请求
     }
 }
 /*
