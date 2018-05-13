@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.dddf.dao.SspDao">
+
+    <select id="getSsp" resultType="java.util.Map">
+     SELECT
+	id,
+	city_code,
+	scene_id,
+	device_num,
+	NAME,
+	pv,
+	uv,
+	ssp_adslot_id,
+	ssp_app_id,
+	price
+FROM
+	`pmp_resource`
+WHERE
+	ssp_adslot_id = #{ssp_adslot_id}
+
+    </select>
+
+
+</mapper>
