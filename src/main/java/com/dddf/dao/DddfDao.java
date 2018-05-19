@@ -9,14 +9,18 @@ public interface DddfDao {
     List<Map<String, Object>> selectMenu();
 
     List<Map<String, Object>> selectMaterial(@Param("type") String type);
-    void insertUser(@Param("map")Map map);
+
+    void insertUser(@Param("map") Map map);
 
     /**
      * 根据城市code查新订单
+     *
      * @param city_code
      * @return
      */
     List<Map<String, Object>> selectOrder(@Param("city_code") String city_code);
+
+    List<Map<String, Object>> getOrder(@Param("orderid") String orderid);
 
 }
 

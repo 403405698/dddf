@@ -33,12 +33,19 @@ public class AddController {
 
     /**
      * controller层
+     *
      * @param city_code
      * @return
      */
     @GetMapping(value = "/selectOrder")
     public String selectOrder(String city_code) {
         return dddfService.selectOrder(city_code);//返回请求
+    }
+
+    @GetMapping(value = "/getOrder")
+        public String getOrder(String orderid) {
+        return dddfService.getOrder(orderid);//返回请求
+
     }
 }
 

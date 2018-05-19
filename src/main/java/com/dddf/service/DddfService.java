@@ -12,14 +12,6 @@ public interface DddfService {
     void insertUser(Map map);
 
     String selectOrder(String city_code);
+
+    String getOrder(String orderid);
 }
-/*
- * public interface Ddd{
- * String hello();
- * }
- *
- *
- *
- *
- *
- * */
